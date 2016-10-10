@@ -1,0 +1,133 @@
+@import url('bootstrap.css');
+@import url('font-awesome-4.6.3/css/font-awesome.min.css');
+
+/* Main BF group */
+body {
+	margin: 0px;
+	font-size: 0px;
+}
+
+#browserphone {
+	width: 100vw;
+	height: 100vh;
+	border-sizing: box;
+	color: white;
+}
+
+#browserphone * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+#browserphone .bf-content {
+	width: 100%;
+	height: 100%;
+}
+
+/* App & Sidebar group */
+#browserphone  .bf-active-app {
+	height: 100%;
+	width: 50%;
+	display: inline-block;
+}
+
+#browserphone  .bf-sidebar {
+	height: 100%;
+	background: #fff;
+	width: 50%;
+	display: inline-block;
+}
+
+@media only screen and (max-device-width: 950px) {
+	#browserphone  .bf-active-app {
+		width: 100%;
+	}
+}
+
+/* App area group */
+#browserphone  .bf-topbar {
+	background: #333;
+	height: 8%;
+	width: 100%;
+}
+
+#browserphone  .bf-topbar .bf-topbar-action {
+	width: 15%;
+	height: 100%;
+	float: left;
+	font-size: 5vh;
+}
+	
+#browserphone  .bf-topbar .bf-topbar-text {
+	width: 70%;
+	height: 100%;
+	float: left;
+	font-size: 4vh;
+}
+
+#browserphone  .bf-topbar .bf-topbar-state {
+	width: 15%;
+	height: 100%;
+	float: left;
+}
+
+#browserphone .bf-app-area {
+	height: 84%;
+	width: 100%;
+}
+
+#browserphone #bf-dock {
+	height: 8%;
+	background: #333333;
+}
+
+@media only screen and (min-device-width: 950px) {
+	#browserphone  .bf-topbar .bf-topbar-action {
+		width: 10%;
+	}
+	
+	#browserphone  .bf-topbar .bf-topbar-text {
+		width: 75%;
+	}
+}
+
+/* App content group */
+#browserphone .bf-app-area .bf-app-sidebar {
+	background: #fa6108;
+	display: inline-block;
+	height: 100%;
+	width: 15%
+}
+
+#browserphone .bf-app-area .bf-app-content {
+	background: #fff;
+	display: inline-block;
+	height: 100%;
+	width: 85%
+}
+
+@media only screen and (min-device-width: 950px) {
+	#browserphone .bf-app-area .bf-app-sidebar {
+		width: 10%
+	}
+
+	#browserphone .bf-app-area .bf-app-content {
+		width: 90%
+	}
+}
+
+/* Helper CSS */
+#browserphone .center-parent {
+	width: 100%;
+    height: 100%;
+    display: table;
+    text-align: center;
+}
+
+#browserphone .center-child {
+	display: table-cell;
+	vertical-align: middle;
+}
