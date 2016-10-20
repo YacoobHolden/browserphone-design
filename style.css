@@ -98,7 +98,7 @@ body {
 /* App content group */
 #browserphone .bf-app-area .bf-app-sidebar {
 	background: #fa6108;
-	display: inline-block;
+	float: left;
 	height: 100%;
 	width: 15%
 }
@@ -122,7 +122,7 @@ body {
 
 #browserphone .bf-app-area .bf-app-content {
 	background: #fff;
-	/*display: inline-block;*/
+	float: right;
 	height: 100%;
 	width: 85%
 }
