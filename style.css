@@ -41,6 +41,12 @@ body {
 	display: inline-block;
 }
 
+@media only screen and (max-device-width: 1500px) {
+	#browserphone  .bf-sidebar {
+		display: none;
+	}
+}
+
 @media only screen and (max-device-width: 950px) {
 	#browserphone  .bf-active-app {
 		width: 100%;
