@@ -36,7 +36,7 @@ body {
 
 #browserphone  .bf-sidebar {
 	height: 100%;
-	background: #fff;
+	background: #4d4d4d;
 	width: 50%;
 	display: inline-block;
 	z-index: 2;
@@ -144,15 +144,50 @@ body {
 	background: #4d4d4d;
 	height: 100%;
 	padding: 0px 1px 0px 1px;
+	overflow-y: scroll;
 }
 
 #browserphone .bf-app-area .bf-app-content .bf-app-grid .bf-app-grid-square {
 	outline: 1px solid #4d4d4d;
-	height: 100px;
+	height: 25%;
 	background: #f2f2f2;
+	text-align: center;
+	color: #333333;
+}
+#browserphone .bf-app-area .bf-app-content .bf-app-grid .bf-app-grid-square.selected {
+	background: #d9d9d9;
 }
 #browserphone .bf-app-area .bf-app-content .bf-app-grid .bf-app-grid-square.darker {
 	background: #d9d9d9;
+}
+#browserphone .bf-app-area .bf-app-content .bf-app-grid .bf-app-grid-square.image {
+	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("shutterstock_81301759.jpg");
+	background-size: cover;
+}
+#browserphone .bf-app-area .bf-app-content .bf-app-grid .bf-app-grid-square.image.selected {
+	background: linear-gradient(rgba(150, 150, 150, 0.4), rgba(150, 150, 150, 0.4)), url("shutterstock_81301759.jpg");
+	background-size: cover;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-grid .bf-app-grid-square .grid-top-content {
+	display: block;
+	height: 75%;
+}
+#browserphone .bf-app-area .bf-app-content .bf-app-grid .bf-app-grid-square .grid-bottom-content {
+	display: block;
+	height: 25%;
+	font-size: 2vh;
+	line-height: 300%;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(242,242,242,0.65) 29%);
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(242,242,242,0.65) 29%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(242,242,242,0.65) 29%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6f2f2f2',GradientType=0 );
+}
+#browserphone .bf-app-area .bf-app-content .bf-app-grid .bf-app-grid-square.selected .grid-bottom-content {
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(217,217,217,0.65) 29%);
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(217,217,217,0.65) 29%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(217,217,217,0.65) 29%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6d9d9d9',GradientType=0 );
 }
 
 @media only screen and (min-device-width: 950px) {
