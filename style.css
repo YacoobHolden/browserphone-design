@@ -121,6 +121,18 @@ body {
 	padding-top: 1.5vh;
 }
 
+#browserphone .bf-app-area .bf-app-sidebar .bf-app-sidebar-block:first-child .bf-app-sidebar-top {
+	height: 5.5vh;
+	padding-top: 0px;
+}
+
+#browserphone .bf-app-area .bf-app-sidebar .bf-app-sidebar-block:first-child .bf-app-sidebar-top:hover {
+	-webkit-transition: font 0.1s ease, height 0.1s ease;
+	transition: font 0.1s ease, height 0.1s ease;
+	font-size: 5vh;
+	height: 6.5vh;
+}
+
 #browserphone .bf-app-area .bf-app-sidebar .bf-app-sidebar-block .bf-app-sidebar-top:hover {
 	-webkit-transition: font 0.1s ease, height 0.1s ease;
 	transition: font 0.1s ease, height 0.1s ease;
@@ -140,6 +152,34 @@ body {
 	width: 85%
 }
 
+/* App bar */
+#browserphone .bf-app-area .bf-app-content .bf-app-bar {
+	height: 10%;
+	background: #e5e5e5;
+	border: 1px solid #4d4d4d;
+	border-top: none;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-bar .left-content {
+    float: left;
+    height: 100%;
+    font-size: 3vh;
+    padding: 5px;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-bar .right-content {
+	float: right;
+	height: 100%;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-bar .search {
+	background: none;
+    border: none;
+    height: 100%;
+    padding: 10px;
+}
+
+/* Grid */
 #browserphone .bf-app-area .bf-app-content .bf-app-grid {
 	background: #4d4d4d;
 	height: 100%;
