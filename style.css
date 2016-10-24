@@ -220,7 +220,7 @@ body {
 /* Grid */
 #browserphone .bf-app-area .bf-app-content .bf-app-grid {
 	background: #4d4d4d;
-	height: 100%;
+	height: 90%;
 	padding: 0px 1px 0px 1px;
 	overflow-y: scroll;
 }
@@ -288,6 +288,21 @@ body {
 	line-height: 8vh;
 }
 
+/* List */
+#browserphone .bf-app-area .bf-app-content .bf-app-list {
+	background: #4d4d4d;
+	height: 90%;
+	padding: 0px 1px 0px 1px;
+	overflow-y: scroll;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-list .bf-app-list-row{
+	border-bottom: 1px solid #4d4d4d;
+	height: 15%;
+	background: #f2f2f2;
+	color: #333333;
+}
+
 @media only screen and (min-width: 992px) {
 	#browserphone .bf-app-area .bf-app-sidebar {
 		width: 10%
@@ -297,6 +312,15 @@ body {
 		width: 90%
 	}
 }
+
+/* Special case where app sidebar hidden */
+#browserphone .bf-app-area.no-app-sidebar .bf-app-sidebar {
+	display: none;
+}
+#browserphone .bf-app-area.no-app-sidebar .bf-app-content {
+	width: 100%
+}
+
 
 /* Dock group */
 #browserphone #bf-dock {
