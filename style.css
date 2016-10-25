@@ -78,10 +78,16 @@ body {
 	font-size: 4vh;
 }
 
-#browserphone  .bf-topbar .bf-topbar-state {
+#browserphone  .bf-topbar .bf-topbar-apps {
 	width: 15%;
 	height: 100%;
 	float: left;
+	font-size: 3vh;
+}
+#browserphone  .bf-topbar .bf-topbar-apps:hover {
+	-webkit-transition: font 0.1s ease;
+	transition: font 0.1s ease;
+	font-size: 4vh;
 }
 
 #browserphone .bf-app-area {
@@ -97,6 +103,11 @@ body {
 	#browserphone  .bf-topbar .bf-topbar-text {
 		width: 75%;
 	}
+}
+
+/* Special case where no dock */
+#browserphone .bf-active-app.no-dock .bf-app-area {
+	height: 92%;
 }
 
 /* App content group */
@@ -296,11 +307,53 @@ body {
 	overflow-y: scroll;
 }
 
-#browserphone .bf-app-area .bf-app-content .bf-app-list .bf-app-list-row{
+#browserphone .bf-app-area .bf-app-content .bf-app-list .bf-app-list-row {
 	border-bottom: 1px solid #4d4d4d;
 	height: 15%;
 	background: #f2f2f2;
 	color: #333333;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-list .bf-app-list-row .list-row-icon {
+	width: 20%;
+	height: 100%;
+	float: left;
+	font-size: 8vh;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-list .bf-app-list-row .list-row-text-area {
+	width: 60%;
+	height: 100%;
+	float: left;
+	font-size: 6vh;
+}
+#browserphone .bf-app-area .bf-app-content .bf-app-list .bf-app-list-row .list-row-text-area .top-text {
+    height: 50%;
+    font-size: 3vh;
+    line-height: 8vh;
+}
+#browserphone .bf-app-area .bf-app-content .bf-app-list .bf-app-list-row .list-row-text-area .bottom-text {
+	height: 50%;
+	font-size: 2vh;
+	line-height: 4vh;
+	color: #808080;
+}
+#browserphone .bf-app-area .bf-app-content .bf-app-list .bf-app-list-row .list-row-text-area .solo-text {
+    height: 100%;
+    font-size: 3vh;
+    line-height: 10vh;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-list .bf-app-list-row .list-row-actions {
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+@media only screen and (max-width: 992px) {
+	#browserphone .bf-app-area .bf-app-content .bf-app-list .bf-app-list-row .list-row-icon {
+		font-size: 6vh;
+	}
 }
 
 @media only screen and (min-width: 992px) {
@@ -310,6 +363,62 @@ body {
 
 	#browserphone .bf-app-area .bf-app-content {
 		width: 90%
+	}
+}
+
+/* App View */
+#browserphone .bf-app-area .bf-app-content .bf-app-view {
+	background: #4d4d4d;
+	height: 100%;
+	padding: 0px 1px 0px 1px;
+	overflow-y: scroll;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-view .bf-app-view-row {
+	width: 100%;
+	height: 33%;
+	display: block;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-view .bf-app-view-row .bf-app-view-cell {
+	width: 33%;
+	height: 100%;
+	float: left;
+	text-align: center;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-view .bf-app-view-row .bf-app-view-cell .app-group {
+    width: 80%;
+    height: 80%;
+  	background-color: #fa6108;
+	display: inline-block;
+	margin-top: 3vh;
+	border-radius: 2vh;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-view .bf-app-view-row .bf-app-view-cell .app-group .app-icon {
+	height: 75%;
+	width: 100%;
+	font-size: 13vh;
+	text-shadow: 3px 3px #808080;
+}
+
+#browserphone .bf-app-area .bf-app-content .bf-app-view .bf-app-view-row .bf-app-view-cell .app-group .app-name {
+    height: 25%;
+    font-size: 3vh;
+}
+
+@media only screen and (max-width: 992px) {
+	#browserphone .bf-app-area .bf-app-content .bf-app-view .bf-app-view-row {
+		height: 20%;
+	}
+	
+	#browserphone .bf-app-area .bf-app-content .bf-app-view .bf-app-view-row .bf-app-view-cell .app-group .app-icon {
+		font-size: 8vh;
+	}
+
+	#browserphone .bf-app-area .bf-app-content .bf-app-view .bf-app-view-row .bf-app-view-cell .app-group .app-name {
+	    font-size: 2vh;
 	}
 }
 
@@ -335,6 +444,7 @@ body {
     height: 100%;
     display: table;
     text-align: center;
+	color: #808080;
 }
 
 #browserphone #bf-dock .bf-dock-divider .bf-dock-group {
@@ -369,6 +479,16 @@ body {
 	#browserphone #bf-dock .bf-dock-divider .bf-dock-group-bottom {
 		display: none;
 	}
+}
+
+#browserphone #bf-dock .bf-dock-divider .bf-dock-group.active-group .bf-dock-app-grouper .bf-dock-group-top {
+	font-size: 5.2vh;
+	color: #fff;
+}
+
+/* Special case where no dock */
+#browserphone .bf-active-app.no-dock #bf-dock {
+	display: none;
 }
 
 /* Helper CSS */
